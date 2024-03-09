@@ -1,6 +1,6 @@
 import express from 'express';
 import { welcomeController } from '../controllers/welcomeController';
-import blogRouter from './BlogRoutes';
+import blogRouter from './blogRoutes';
 
 const appRouter = express.Router();
 

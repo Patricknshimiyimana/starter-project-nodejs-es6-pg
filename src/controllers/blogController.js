@@ -14,3 +14,13 @@ export const createBlog = async (req, res) => {
         return res.status(500).json({message: 'Error creating blog', error: error.message});
     }
 }
+
+export const getAllBlogs = async (req, res) => {
+    try {
+        const blogs = await Blog.findAll();
+        return res.status(200).json({message: "Retreived all blogs successfully", blogs});
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({message: 'Error retrieving blogs', error: error.message});
+    }
+}
