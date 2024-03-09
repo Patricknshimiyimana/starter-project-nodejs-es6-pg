@@ -1,0 +1,1 @@
+### A simple node.js / express server with sequelize, postgres and babel(for compiling es6 code) configured

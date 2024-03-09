@@ -1,0 +1,33 @@
+{
+  "name": "blog_api",
+  "version": "1.0.0",
+  "description": "blog api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist",
+    "start": "npm run build && node dist/app.js",
+    "dev": "nodemon --exec babel-node src/app.js",
+    "migration": "npx sequelize-cli db:migrate",
+    "unmigrate": "npx sequelize-cli db:migrate:undo:all",
+    "create-model": "npx sequelize-cli model:generate --name ModelName --attributes field1:string,field2:string,field3:string"
+  },
+  "author": "patricknshimiyimana",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.1",
+    "sequelize-cli": "^6.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.0",
+    "nodemon": "^3.1.0"
+  }
+}
